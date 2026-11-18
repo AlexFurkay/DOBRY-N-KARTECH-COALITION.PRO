@@ -1,129 +1,125 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to the main page of DKC</title>
-    <style>
-        :root {
-            --bg: #f2f5f9;
-            --surface: #ffffff;
-            --ink: #18212f;
-            --muted: #566176;
-            --line: #d9e0ea;
-            --accent: #2b59e0;
-            --ok: #12a37f;
-            color-scheme: light;
-        }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #121823;
-                --surface: #1a2230;
-                --ink: #eef2f8;
-                --muted: #a2adc2;
-                --line: #2b3548;
-                --accent: #7a9bff;
-                --ok: #3fd3ac;
-                color-scheme: dark;
-            }
-        }
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            margin: 0;
-            background: var(--bg);
-            color: var(--ink);
-            font: 18px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-        }
-        .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
-        header { padding: 20px 0; border-bottom: 1px solid var(--line); }
-        header .wrap { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 700; letter-spacing: .01em; }
-        nav a { color: var(--muted); text-decoration: none; margin-left: 22px; font-size: 16px; }
-        nav a:hover, nav a:focus-visible { color: var(--accent); }
-        a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-        .hero { padding: 96px 0 72px; }
-        .status {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px;
-            background: var(--surface); font-size: 15px; color: var(--muted);
-        }
-        .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ok); animation: pulse 2.4s ease-out infinite; }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 55%, transparent); }
-            100% { box-shadow: 0 0 0 12px transparent; }
-        }
-        h1 { font-size: clamp(40px, 8vw, 76px); line-height: 1.05; margin: 28px 0 20px; letter-spacing: -.025em; max-width: 14ch; }
-        .lead { color: var(--muted); max-width: 46ch; margin: 0 0 36px; }
-        .btn {
-            display: inline-block; padding: 14px 26px; border-radius: 10px;
-            background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
-            transition: transform .15s ease;
-        }
-        .btn:hover { transform: translateY(-2px); }
-        @media (prefers-color-scheme: dark) { .btn { color: #0c1220; } }
-        section { padding: 56px 0; border-top: 1px solid var(--line); }
-        h2 { font-size: 28px; margin: 0 0 24px; letter-spacing: -.01em; }
-        .row { display: grid; grid-template-columns: 200px 1fr; gap: 8px 32px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-        .row:last-child { border-bottom: 0; }
-        .row b { font-weight: 600; }
-        .row span { color: var(--muted); }
-        footer { padding: 36px 0 56px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); }
-        @media (max-width: 600px) {
-            .row { grid-template-columns: 1fr; }
-            nav a { margin-left: 14px; }
-            .hero { padding: 64px 0 48px; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .dot { animation: none; }
-            .btn { transition: none; }
-            html { scroll-behavior: auto; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to the main page of DKC</title>
+<link rel="icon" href="logo.png">
+<script>try{var s=localStorage.getItem('dkc-lang');document.documentElement.dataset.lang=s||((navigator.language||'').toLowerCase().indexOf('ru')==0?'ru':'en')}catch(e){}</script>
+<style>
+:root{--bg:#f3f5fb;--surface:#fff;--ink:#151b33;--muted:#55607f;--line:#d8deef;--accent:#2446c9;--on:#fff;--ok:#12a37f;--glow:rgba(36,70,201,.18);color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1224;--surface:#161c36;--ink:#eceffd;--muted:#a3abc8;--line:#28305a;--accent:#7d9bff;--on:#0c1220;--ok:#3fd3ac;--glow:rgba(125,155,255,.22);color-scheme:dark}}
+html[data-lang=ru] [lang=en],html[data-lang=en] [lang=ru]{display:none}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+header{padding:14px 0;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:12px 24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;margin-right:auto}
+.brand img{width:36px;height:36px;border-radius:50%}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:16px}
+nav a:hover{color:var(--accent)}
+.lang button{font:inherit;font-size:14px;padding:5px 12px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.lang button:first-child{border-radius:8px 0 0 8px;border-right:0}
+.lang button:last-child{border-radius:0 8px 8px 0}
+.lang button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.hero{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding:88px 0 72px}
+.hero img{width:157px;height:157px;border-radius:50%;box-shadow:0 0 0 14px var(--glow),0 0 90px 24px var(--glow)}
+.status{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:15px;color:var(--muted)}
+.dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--ok);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 55%,transparent)}100%{box-shadow:0 0 0 12px transparent}}
+h1{font-size:clamp(36px,7vw,64px);line-height:1.08;margin:26px 0 18px;letter-spacing:-.02em}
+.lead{color:var(--muted);max-width:50ch;margin:0 0 32px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;background:var(--accent);color:var(--on);text-decoration:none;font-weight:600;margin:0 10px 10px 0;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 2px var(--accent)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;margin:0 0 22px;letter-spacing:-.01em}
+section p{max-width:62ch;margin:0}
+.row{display:grid;grid-template-columns:220px 1fr;gap:6px 32px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row b{font-weight:600}
+.row span{color:var(--muted);overflow-wrap:anywhere}
+.gal{columns:3 250px;column-gap:16px}
+figure{margin:0 0 16px;break-inside:avoid;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 14px;font-size:15px;color:var(--muted)}
+.gal figcaption b{display:block;color:var(--ink);font-weight:600}
+figure img.sm{width:auto;max-width:100%;margin:0 auto;padding:18px 14px 6px}
+footer{padding:32px 0 56px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+@media(max-width:700px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0}.hero img{order:-1;width:110px;height:110px}.row{grid-template-columns:1fr}nav{order:3;width:100%}nav a{margin:0 18px 0 0}}
+@media(prefers-reduced-motion:reduce){.dot{animation:none}.btn{transition:none}html{scroll-behavior:auto}}
+</style>
 </head>
-<body>
-    <header>
-        <div class="wrap">
-            <div class="logo">Мой сайт</div>
-            <nav>
-                <a href="#about">О нас</a>
-                <a href="#projects">Проекты</a>
-                <a href="#contacts">Контакты</a>
-            </nav>
-        </div>
-    </header>
+<body id="top">
+<header><div class="wrap">
+<a class="brand" href="#top"><img src="logo.png" alt="">DKC</a>
+<nav>
+<a href="#about"><span lang="ru">О нас</span><span lang="en">About</span></a>
+<a href="#projects"><span lang="ru">Проекты</span><span lang="en">Projects</span></a>
+<a href="#gallery"><span lang="ru">Галерея</span><span lang="en">Gallery</span></a>
+<a href="#contacts"><span lang="ru">Контакты</span><span lang="en">Contacts</span></a>
+</nav>
+<div class="lang" role="group" aria-label="Language"><button data-l="ru">RU</button><button data-l="en">EN</button></div>
+</div></header>
 
-    <main>
-        <div class="wrap">
-            <div class="hero">
-                <span class="status"><span class="dot"></span>Происходит захват ваших данных, не выходите с сайта</span>
-                <h1></h1>
-                <p class="lead">Мы небольшая команда разработчиков и инженеров. Закрытое производство совершенно легальных технологий (клод клод клодбище вайбкодинг).</p>
-                <a class="btn" href="#projects">Смотреть проекты</a>
-            </div>
+<main><div class="wrap">
+<div class="hero">
+<div>
+<span class="status"><span class="dot"></span><span lang="ru">Происходит захват ваших данных, не выходите с сайта</span><span lang="en">Capturing your data. Please do not leave the site.</span></span>
+<h1>Dobry-n-KarTech Coalition</h1>
+<p class="lead"><span lang="ru">Мы небольшая команда разработчиков и инженеров. Закрытое производство совершенно легальных технологий (клод клод клодбище вайбкодинг).</span><span lang="en">We are a small team of developers and engineers. Closed production of completely legal technologies (claude claude claudeyard vibecoding).</span></p>
+<a class="btn" href="#projects"><span lang="ru">Смотреть проекты</span><span lang="en">View projects</span></a>
+<a class="btn alt" href="#contacts"><span lang="ru">Связаться</span><span lang="en">Get in touch</span></a>
+</div>
+<img src="logo.png" alt="DKC">
+</div>
 
-            <section id="about">
-                <h2>О нас</h2>
-                <p>Мы пишем код, пишем доносы, учимся старому, едим во VKUSNO-i-DOT и делаем хорошие вещи вместе с плохими.
-                    Создано с помощью Маруся GPT: Замените этот текст на своё описание</p>
-            </section>
+<section id="about">
+<h2><span lang="ru">О нас</span><span lang="en">About us</span></h2>
+<p><span lang="ru">Мы пишем код, пишем доносы, учимся старому, едим во VKUSNO-i-DOT и делаем хорошие вещи вместе с плохими. Создано с помощью Маруся GPT.</span><span lang="en">We write code, write denunciations, learn the old ways, eat at VKUSNO-i-DOT and make good things together with bad ones. Built with Marusya GPT.</span></p>
+</section>
 
-            <section id="projects">
-                <h2>Проекты</h2>
-                <div class="row"><b>Первый проект</b><span>https://github.com/AlexFurkay/BlackNote</span></div>
-                <div class="row"><b>Второй проект</b><span>https://github.com/AlexFurkay/DeskSaw-VLLM</span></div>
-                <div class="row"><b>Третий проект</b><span>Big Hit with extra cheeze</span></div>
-            </section>
+<section id="projects">
+<h2><span lang="ru">Проекты</span><span lang="en">Projects</span></h2>
+<div class="row"><b>BlackNote</b><span><a href="https://github.com/AlexFurkay/BlackNote">github.com/AlexFurkay/BlackNote</a></span></div>
+<div class="row"><b>DeskSaw-VLLM</b><span><a href="https://github.com/AlexFurkay/DeskSaw-VLLM">github.com/AlexFurkay/DeskSaw-VLLM</a></span></div>
+<div class="row"><b><span lang="ru">Третий проект</span><span lang="en">Third project</span></b><span>Big Hit with extra cheeze</span></div>
+</section>
 
-            <section id="contacts">
-                <h2>Контакты</h2>
-                <p>Напишите нам: <a href="mailto:alex.karsakov.wrk@gmail.com" style="color: var(--accent);">alex.karsakov.wrk@gmail.com</a>
-            </section>
-        </div>
-    </main>
+<section id="gallery">
+<h2><span lang="ru">Галерея</span><span lang="en">Gallery</span></h2>
+<div class="gal">
+<figure><a href="gta.jpg"><img src="gta.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Автопарк организации</span><span lang="en">The organization’s fleet</span></b><span lang="ru">Бронированный универсал с огородом на крыше. Маскировка — наше всё.</span><span lang="en">Armored wagon with a garden on the roof. Camouflage is everything.</span></figcaption></figure>
+<figure><a href="karsakov-edits.jpg"><img src="karsakov-edits.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Karsakov Edits</span><span lang="en">Karsakov Edits</span></b><span lang="ru">Обложка релиза. Рябина, скорость и пометка 18+.</span><span lang="en">Release cover. Rowan berries, speed and an 18+ label.</span></figcaption></figure>
+<figure><a href="buggy.jpg"><img src="buggy.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Багги. Проект в работе</span><span lang="en">Buggy. Work in progress</span></b><span lang="ru">Рама есть, колёса есть. Остальное — вопрос вайбкодинга.</span><span lang="en">Frame: done. Wheels: done. The rest is a matter of vibecoding.</span></figcaption></figure>
+<figure><a href="zil.jpg"><img src="zil.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Реставрация ЗИЛа</span><span lang="en">ZIL restoration</span></b><span lang="ru">Шаг 1: разобрать. Шаг 2: собрать. Шаг 3 мы пока не придумали.</span><span lang="en">Step 1: take it apart. Step 2: put it back. We have not invented step 3 yet.</span></figcaption></figure>
+<figure><a href="garage.jpg"><img src="garage.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Инспекция гаража</span><span lang="en">Garage inspection</span></b><span lang="ru">Машина перевёрнута, всё под контролем.</span><span lang="en">The car is upside down. Everything is under control.</span></figcaption></figure>
+<figure><a href="cube.gif"><img src="cube.gif" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Лаборатория: частицы в кубе</span><span lang="en">Lab: particles in a cube</span></b><span lang="ru">Тысячи красных точек пытаются не вылететь из куба. Пока получается.</span><span lang="en">Thousands of red dots trying not to leave the cube. So far, so good.</span></figcaption></figure>
+<figure><a href="tomato.jpg"><img src="tomato.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Помидырка</span><span lang="en">Tomato project</span></b><span lang="ru">Красный помидор превращается обратно в зелёный. Учёные в шоке.</span><span lang="en">A red tomato turns back into a green one. Scientists are shocked.</span></figcaption></figure>
+<figure><a href="springs.jpg"><img src="springs.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Отдел снабжения</span><span lang="en">Supply department</span></b><span lang="ru">Стратегический запас пружин. Нужен для багги и для настроения.</span><span lang="en">Strategic spring reserve. Needed for the buggy and for morale.</span></figcaption></figure>
+<figure><a href="meme-kvas.jpg"><img src="meme-kvas.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Отдел исследований: молоквас</span><span lang="en">Research department: milkvass</span></b><span lang="ru">Тестовая группа переполнена молоквасом. Результаты засекречены.</span><span lang="en">The test group is overflowing with milkvass. Results are classified.</span></figcaption></figure>
+<figure><a href="meme-tow.jpg"><img src="meme-tow.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Из архива</span><span lang="en">From the archive</span></b><span lang="ru">Эвакуация имущества организации. Не забудем.</span><span lang="en">Evacuation of the organization’s property. We will not forget.</span></figcaption></figure>
+<figure><a href="meme-dura.jpg"><img src="meme-dura.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Отдел кадров</span><span lang="en">HR department</span></b><span lang="ru">Собеседования проходят здесь.</span><span lang="en">Interviews are held here.</span></figcaption></figure>
+<figure><a href="city.jpg"><img class="sm" src="city.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Геолокация</span><span lang="en">Geolocation</span></b><span lang="ru">Сайт так и не понял, из какого мы города.</span><span lang="en">The website still has not figured out which city we are from.</span></figcaption></figure>
+</div>
+</section>
 
-    <footer>
-        <div class="wrap">© 2026 KarTech LTD & ᑓoбрый.CO</div>
-    </footer>
+<section id="contacts">
+<h2><span lang="ru">Контакты</span><span lang="en">Contacts</span></h2>
+<p><span lang="ru">Напишите нам:</span><span lang="en">Write to us:</span> <a href="mailto:alex.karsakov.wrk@gmail.com">alex.karsakov.wrk@gmail.com</a></p>
+</section>
+</div></main>
+
+<footer><div class="wrap">© 2026 KarTech LTD &amp; ᑓoбрый.CO</div></footer>
+
+<script>
+(function(){var r=document.documentElement,b=document.querySelectorAll('.lang button');
+function set(x,save){r.dataset.lang=x;r.lang=x;b.forEach(function(e){e.setAttribute('aria-pressed',e.dataset.l===x)});if(save)try{localStorage.setItem('dkc-lang',x)}catch(e){}}
+b.forEach(function(e){e.onclick=function(){set(e.dataset.l,1)}});set(r.dataset.lang||'ru')})();
+</script>
 </body>
 </html>
