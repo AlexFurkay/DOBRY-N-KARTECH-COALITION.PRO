@@ -2,9 +2,127 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Мой сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to the main page of DKC</title>
+    <style>
+        :root {
+            --bg: #f2f5f9;
+            --surface: #ffffff;
+            --ink: #18212f;
+            --muted: #566176;
+            --line: #d9e0ea;
+            --accent: #2b59e0;
+            --ok: #12a37f;
+            color-scheme: light;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #121823;
+                --surface: #1a2230;
+                --ink: #eef2f8;
+                --muted: #a2adc2;
+                --line: #2b3548;
+                --accent: #7a9bff;
+                --ok: #3fd3ac;
+                color-scheme: dark;
+            }
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font: 18px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+        .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--line); }
+        header .wrap { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; letter-spacing: .01em; }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 22px; font-size: 16px; }
+        nav a:hover, nav a:focus-visible { color: var(--accent); }
+        a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+        .hero { padding: 96px 0 72px; }
+        .status {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px;
+            background: var(--surface); font-size: 15px; color: var(--muted);
+        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ok); animation: pulse 2.4s ease-out infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 55%, transparent); }
+            100% { box-shadow: 0 0 0 12px transparent; }
+        }
+        h1 { font-size: clamp(40px, 8vw, 76px); line-height: 1.05; margin: 28px 0 20px; letter-spacing: -.025em; max-width: 14ch; }
+        .lead { color: var(--muted); max-width: 46ch; margin: 0 0 36px; }
+        .btn {
+            display: inline-block; padding: 14px 26px; border-radius: 10px;
+            background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+            transition: transform .15s ease;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        @media (prefers-color-scheme: dark) { .btn { color: #0c1220; } }
+        section { padding: 56px 0; border-top: 1px solid var(--line); }
+        h2 { font-size: 28px; margin: 0 0 24px; letter-spacing: -.01em; }
+        .row { display: grid; grid-template-columns: 200px 1fr; gap: 8px 32px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+        .row:last-child { border-bottom: 0; }
+        .row b { font-weight: 600; }
+        .row span { color: var(--muted); }
+        footer { padding: 36px 0 56px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); }
+        @media (max-width: 600px) {
+            .row { grid-template-columns: 1fr; }
+            nav a { margin-left: 14px; }
+            .hero { padding: 64px 0 48px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .dot { animation: none; }
+            .btn { transition: none; }
+            html { scroll-behavior: auto; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Привет! Мой сайт работает.</h1>
+    <header>
+        <div class="wrap">
+            <div class="logo">Мой сайт</div>
+            <nav>
+                <a href="#about">О нас</a>
+                <a href="#projects">Проекты</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrap">
+            <div class="hero">
+                <span class="status"><span class="dot"></span>Сайт работает</span>
+                <h1>Привет! Мой сайт работает.</h1>
+                <p class="lead">Мы небольшая команда разработчиков и инженеров. Закрытое производство совершенно легальных технологий (клод клод клодбище вайбкодинг).</p>
+                <a class="btn" href="#projects">Смотреть проекты</a>
+            </div>
+
+            <section id="about">
+                <h2>О нас</h2>
+                <p>Мы пишем код, пишем доносы, учимся старому, едим во VKUSNO-i-DOT и делаем хорошие вещи вместе с плохими. `Создано с помощью Маруся GPT: Замените этот текст на своё описание`</p>
+            </section>
+
+            <section id="projects">
+                <h2>Проекты</h2>
+                <div class="row"><b>Первый проект</b><span>https://github.com/AlexFurkay/BlackNote</span></div>
+                <div class="row"><b>Второй проект</b><span>https://github.com/AlexFurkay/DeskSaw-VLLM</span></div>
+                <div class="row"><b>Третий проект</b><span>Big Hit with extra cheeze</span></div>
+            </section>
+
+            <section id="contacts">
+                <h2>Контакты</h2>
+                <p>Напишите нам: <a href="alex.karsakov.wrk@gmail.com" style="color: var(--accent);">hello@example.com</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrap">© 2026 KarTech LTD & ᑓoбрый.CO/div>
+    </footer>
 </body>
 </html>
