@@ -49,6 +49,11 @@ figure img{display:block;width:100%;height:auto}
 figcaption{padding:10px 14px;font-size:15px;color:var(--muted)}
 .gal figcaption b{display:block;color:var(--ink);font-weight:600}
 figure img.sm{width:auto;max-width:100%;margin:0 auto;padding:18px 14px 6px}
+.gal a{cursor:zoom-in}
+dialog{border:0;padding:0;background:none;max-width:96vw;max-height:96vh;overflow:visible}
+dialog::backdrop{background:rgba(5,8,18,.88)}
+dialog img{display:block;max-width:96vw;max-height:94vh;margin:auto;border-radius:10px}
+.x{position:fixed;top:14px;right:14px;width:48px;height:48px;border-radius:50%;border:0;background:var(--accent);color:var(--on);font-size:24px;line-height:1;cursor:pointer}
 footer{padding:32px 0 56px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
 @media(max-width:700px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0}.hero img{order:-1;width:110px;height:110px}.row{grid-template-columns:1fr}nav{order:3;width:100%}nav a{margin:0 18px 0 0}}
 @media(prefers-reduced-motion:reduce){.dot{animation:none}.btn{transition:none}html{scroll-behavior:auto}}
@@ -93,7 +98,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:15px;border-top:1px soli
 <section id="gallery">
 <h2><span lang="ru">Галерея</span><span lang="en">Gallery</span></h2>
 <div class="gal">
-<figure><a href="gta.jpg"><img src="gta.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Автопарк организации</span><span lang="en">The organization’s fleet</span></b><span lang="ru">Бронированный универсал с огородом на крыше. Маскировка — наше всё.</span><span lang="en">Armored wagon with a garden on the roof. Camouflage is everything.</span></figcaption></figure>
+<figure><a href="gta.jpg"><img src="gta.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Автопарк организации</span><span lang="en">The organization’s fleet</span></b><span lang="ru">Бронированная ГАЗ-24 со сдвоенным пулемётом на крыше для поездок на шашлыки.</span><span lang="en">Armored GAZ-24 with a twin machine gun on the roof for barbecue trips.</span></figcaption></figure>
 <figure><a href="karsakov-edits.jpg"><img src="karsakov-edits.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Karsakov Edits</span><span lang="en">Karsakov Edits</span></b><span lang="ru">Обложка релиза. Рябина, скорость и пометка 18+.</span><span lang="en">Release cover. Rowan berries, speed and an 18+ label.</span></figcaption></figure>
 <figure><a href="buggy.jpg"><img src="buggy.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Багги. Проект в работе</span><span lang="en">Buggy. Work in progress</span></b><span lang="ru">Рама есть, колёса есть. Остальное — вопрос вайбкодинга.</span><span lang="en">Frame: done. Wheels: done. The rest is a matter of vibecoding.</span></figcaption></figure>
 <figure><a href="zil.jpg"><img src="zil.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Реставрация ЗИЛа</span><span lang="en">ZIL restoration</span></b><span lang="ru">Шаг 1: разобрать. Шаг 2: собрать. Шаг 3 мы пока не придумали.</span><span lang="en">Step 1: take it apart. Step 2: put it back. We have not invented step 3 yet.</span></figcaption></figure>
@@ -105,6 +110,18 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:15px;border-top:1px soli
 <figure><a href="meme-tow.jpg"><img src="meme-tow.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Из архива</span><span lang="en">From the archive</span></b><span lang="ru">Эвакуация имущества организации. Не забудем.</span><span lang="en">Evacuation of the organization’s property. We will not forget.</span></figcaption></figure>
 <figure><a href="meme-dura.jpg"><img src="meme-dura.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Отдел кадров</span><span lang="en">HR department</span></b><span lang="ru">Собеседования проходят здесь.</span><span lang="en">Interviews are held here.</span></figcaption></figure>
 <figure><a href="city.jpg"><img class="sm" src="city.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Геолокация</span><span lang="en">Geolocation</span></b><span lang="ru">Сайт так и не понял, из какого мы города.</span><span lang="en">The website still has not figured out which city we are from.</span></figcaption></figure>
+<figure><a href="bighit.jpg"><img src="bighit.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Big Hit with extra cheeze</span><span lang="en">Big Hit with extra cheeze</span></b><span lang="ru">Третий проект организации. Разрабатывается, пока горячий.</span><span lang="en">The organization’s third project. In development while it is still hot.</span></figcaption></figure>
+<figure><a href="bros.jpg"><img src="bros.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">С братанами на машинках гоняем</span><span lang="en">Racing cars with the bros</span></b><span lang="ru">Три машины, лестница в небо и ни одного тормоза.</span><span lang="en">Three cars, a stairway to heaven and no brakes.</span></figcaption></figure>
+<figure><a href="walker.jpg"><img src="walker.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Шагоход «Кот в Adidas»</span><span lang="en">Walker “Cat in Adidas”</span></b><span lang="ru">Построен по чертежам кота в спортивном костюме. До цели 3 км.</span><span lang="en">Built from the blueprints of a cat in a tracksuit. Distance to target: 3 km.</span></figcaption></figure>
+<figure><a href="plan.jpg"><img src="plan.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">План наступления на дедлайн</span><span lang="en">Battle plan against the deadline</span></b><span lang="ru">Стрелки нарисованы, флажок поставлен. Осталось написать код.</span><span lang="en">Arrows drawn, flag placed. All that is left is to write the code.</span></figcaption></figure>
+<figure><a href="xeon.jpg"><img src="xeon.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Разгон Xeon</span><span lang="en">Xeon overclocking</span></b><span lang="ru">Стенд после первого включения. Охлаждение не предусмотрено.</span><span lang="en">Test bench after the first power-on. Cooling not included.</span></figcaption></figure>
+<figure><a href="lunch.jpg"><img src="lunch.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Корпоративный обед</span><span lang="en">Corporate lunch</span></b><span lang="ru">Шаурма и французское пиво. Ресурсы для вайбкодинга.</span><span lang="en">Shawarma and French beer. Resources for vibecoding.</span></figcaption></figure>
+<figure><a href="beer-salvo.jpg"><img src="beer-salvo.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Система залпового пива</span><span lang="en">Salvo beer system</span></b><span lang="ru">Полный боекомплект. Дальность — до холодильника.</span><span lang="en">Fully loaded. Range: as far as the fridge.</span></figcaption></figure>
+<figure><a href="dirt-houses.jpg"><img src="dirt-houses.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Жилой комплекс «Земля»</span><span lang="en">Residential complex “Dirt”</span></b><span lang="ru">Квартиры с видом на морские мины. Двери деревянные.</span><span lang="en">Apartments with a view of sea mines. Wooden doors.</span></figcaption></figure>
+<figure><a href="airfield.jpg"><img src="airfield.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Аэродром</span><span lang="en">Airfield</span></b><span lang="ru">Два биплана, один танк и ни одного диспетчера.</span><span lang="en">Two biplanes, one tank and no air traffic controller.</span></figcaption></figure>
+<figure><a href="kamaz.jpg"><img src="kamaz.jpg" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Отдел логистики</span><span lang="en">Logistics department</span></b><span lang="ru">Новая поставка. Разгрузка идёт по плану.</span><span lang="en">New delivery. Unloading is going to plan.</span></figcaption></figure>
+<figure><a href="logo2.png"><img class="sm" src="logo2.png" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Запасной логотип</span><span lang="en">Backup logo</span></b><span lang="ru">Выдаётся по праздникам и в бою.</span><span lang="en">Issued on holidays and in battle.</span></figcaption></figure>
+<figure><a href="bonus.png"><img class="sm" src="bonus.png" alt="" loading="lazy"></a><figcaption><b><span lang="ru">Квартальная премия</span><span lang="en">Quarterly bonus</span></b><span lang="ru">Выплачена кристаллами. Налогом не облагается.</span><span lang="en">Paid in crystals. Tax-free.</span></figcaption></figure>
 </div>
 </section>
 
@@ -115,11 +132,12 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:15px;border-top:1px soli
 </div></main>
 
 <footer><div class="wrap">© 2026 KarTech LTD &amp; ᑓoбрый.CO</div></footer>
+<dialog id="lb"><button class="x" aria-label="Close" title="Закрыть / Close">✕</button><img alt=""></dialog>
 
 <script>
 (function(){var r=document.documentElement,b=document.querySelectorAll('.lang button');
 function set(x,save){r.dataset.lang=x;r.lang=x;b.forEach(function(e){e.setAttribute('aria-pressed',e.dataset.l===x)});if(save)try{localStorage.setItem('dkc-lang',x)}catch(e){}}
-b.forEach(function(e){e.onclick=function(){set(e.dataset.l,1)}});set(r.dataset.lang||'ru')})();
+b.forEach(function(e){e.onclick=function(){set(e.dataset.l,1)}});set(r.dataset.lang||'ru');var d=document.getElementById('lb'),im=d.querySelector('img');document.querySelectorAll('.gal a').forEach(function(a){a.onclick=function(e){e.preventDefault();im.src=a.href;d.showModal()}});d.onclick=function(e){if(e.target!==im)d.close()}})();
 </script>
 </body>
 </html>
